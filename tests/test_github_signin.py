@@ -29,6 +29,7 @@ DESKTOP_TEST_SIZES = [
                  id="414x896_skip"),
 ]
 
+
 @pytest.mark.parametrize("size", DESKTOP_TEST_SIZES)
 def test_github_signin_desktop_skip_mobile(driver, size):
     driver.set_window_size(*size)
@@ -39,9 +40,9 @@ def test_github_signin_desktop_skip_mobile(driver, size):
     assert_login_page(driver)
 
 
-
 DESKTOP_SIZES = [(1400, 900), (1280, 720)]
 MOBILE_SIZES = [(390, 844), (414, 896)]
+
 
 @pytest.mark.parametrize(
     "driver_with_window",
